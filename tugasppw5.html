@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="en"> 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            /* styling dasar untuk body */
+            body {
+                font-family: Arial, sans-serif; /*untuk jenis font*/
+                background-color: #f4f4f4; /**/
+                text-align: center; /*mengatur posisi teks*/
+            }
+
+            /* styling tabel */
+            table {
+                margin: 20px auto; /*mengatur jarak luar*/
+                border-collapse: collapse; /*mengatur garis table agar rapih atau terpisah*/
+                width: 70%;
+            }
+
+            th, td {
+                padding: 10px; /*mengatur jarak isi dengan border dalam sel*/
+            }
+
+            th {
+                background-color: #4caf50;
+                color: white;
+            }
+
+            tr:nth-chiled(even) {
+                background-color: #f2f2f2;
+            }
+
+            figure {
+                margin-top: 30px;
+            }
+
+            img {
+                width: 200px;
+                border-radius: 100px; /*mengatur sudut elemen jadi melengkung*/
+            }
+        </style>
+    </head>
+    <body>
+        <h1 align="center">Data Mahasiswa</h1>
+        <table border="20" cellpadding="5" cellspacing="50" width="900" height="360">
+            <!-- Border = ketebalan tabel
+             cellpadding = jarak isi dengan border dalam sel
+             cellspacing = jarak antar sel table -->
+
+            <thead bgcolor="#ddd">
+                <!-- thead digunakan untuk bagian Judul kolom
+                 bgcolor untuk warna background -->
+                <tr>
+                    <th colspan="30">Daftar Mahasiswa</th>
+                </tr>
+
+                <tr>
+                    <!-- align = Horizontal teks
+                     valign = Vertikal teks -->
+                    <th align="" valign="">NIM</th>
+                    <th align="center" valign="middle">Nama</th>
+                    <th align="center" valign="middle">Jurusan</th>
+                </tr>
+            </thead>
+
+            <!-- Bagian isi tabel -->
+            <tbody>
+                <!-- tbody digunakan untuk isi data tabel -->
+                 <tr>
+                    <td align="center">12345</td>
+                    <td>Andi</td>
+                    <td rowspan="2" align="center" valign="middle" bgcolor="#e0f7fa">
+                        <!-- rowspan = menggabungkan baris -->
+                         Teknik Informatika
+                    </td>
+                </tr>
+
+                 <tr>
+                    <td align="center" valign="middle">678910</td>
+                    <td>Budi</td> <!-- kolom jurusan digabung dari atas (rowspan)-->
+                 </tr>
+
+                 <tr>
+                    <td align="center">111213</td>
+                    <td>Cindy</td>
+                    <td>Sistem Informasi</td>
+                 </tr>
+            </tbody>
+        </table>
+
+        <!-- Menampilkan gambar dengan figure -->
+         <figure>
+            <img src="gambarmhs.png" alt="Gambar Mahasiswa" width="500">
+            <!-- figcaption digunakan untuk memberikan keterangan pada gambar -->
+             <figcaption>Mahasiswa Teknik Informatika</figcaption>
+         </figure>
+
+         <figure>
+            <img src="gambarmhs2.png" alt="Gambar Mahasiswa" width="500">
+            <figcaption>Mahasiswa Sistem Informasi</figcaption>
+         </figure>
+    </body>
+    </html>
+</body>
+</html>
